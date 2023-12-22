@@ -1,0 +1,13 @@
+If you've initialized Docker for a Python project using the Docker Init CLI and specified that you'll be using Flask to run your app on port 5000 with Python 3.11.4, your `requirements.txt` file should include the dependencies required by your Flask application.
+
+For a basic Flask application, your `requirements.txt` might include dependencies like `Flask` itself, and potentially other packages your application uses. For instance:
+
+```plaintext
+Flask==2.0.2
+```
+
+If the cloned repository `https://github.com/docker/python-docker` is a Flask-based application, it likely has a `requirements.txt` file containing the necessary dependencies. After cloning the repository, you can check its `requirements.txt` to see the specific dependencies it lists. This file typically includes all the Python libraries and packages required for the project to run.
+
+You can view the contents of the `requirements.txt` file by navigating to the cloned repository on your local machine and opening the file in a text editor or by using command-line tools like `cat` or `more` (e.g., `cat requirements.txt`).
+
+Once you have the requirements specified, you'd build your Docker image, referencing this `requirements.txt` file to ensure those dependencies are installed inside the Docker container when it's created. This is typically done in your Dockerfile using a `pip install -r requirements.txt` command.
